@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 4/22/18 5:24 PM
+ * Created by YSN Studio on 4/22/18 5:47 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 4/22/18 5:19 PM
+ * Last modified 4/22/18 5:46 PM
  */
 
 apply plugin: 'com.android.application'
@@ -24,6 +24,13 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    flavorDimensions "production"
+    productFlavors {
+        production {
+            applicationIdSuffix ""
+            buildConfigField("String", "BASE_URL_WEATHER_ENDPOINT", "\"http://dataservice.accuweather.com/\"")
         }
     }
 }
