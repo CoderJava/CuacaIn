@@ -1,14 +1,14 @@
 /*
- * Created by YSN Studio on 4/22/18 5:24 PM
+ * Created by YSN Studio on 5/2/18 10:53 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 4/22/18 5:07 PM
+ * Last modified 5/2/18 10:05 PM
  */
 
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    ext.kotlin_version = '1.2.40'
+    ext.kotlin_version = '1.2.41'
     repositories {
         google()
         jcenter()
