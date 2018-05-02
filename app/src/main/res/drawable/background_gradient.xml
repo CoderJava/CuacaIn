@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by YSN Studio on 5/2/18 10:53 PM
+  ~ Copyright (c) 2018. All rights reserved.
+  ~
+  ~ Last modified 5/2/18 10:34 PM
+  -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/horizontal_margin_16dp" />
+            <gradient android:centerColor="#1C9A87" android:endColor="#29A29E" android:startColor="#149774" android:type="linear" />
+        </shape>
+    </item>
+</selector>
