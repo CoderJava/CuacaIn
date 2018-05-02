@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 4/22/18 5:56 PM
+ * Created by YSN Studio on 5/2/18 10:53 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 4/22/18 5:55 PM
+ * Last modified 5/2/18 10:21 PM
  */
 
 apply plugin: 'com.android.application'
@@ -37,8 +37,9 @@ android {
 }
 
 dependencies {
+
     /* Directory dependency */
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
 
     /* Kotlin support */
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -48,6 +49,7 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     implementation "com.android.support:design:$android_support_version"
     implementation "com.android.support:support-v4:$android_support_version"
+    implementation "com.android.support:cardview-v7:$android_support_version"
 
     /* Testing framework */
     testImplementation 'junit:junit:4.12'
@@ -91,5 +93,4 @@ dependencies {
     /* Anko */
     implementation "org.jetbrains.anko:anko-commons:$anko_version"
     implementation "org.jetbrains.anko:anko-design:$anko_version"
-
 }
