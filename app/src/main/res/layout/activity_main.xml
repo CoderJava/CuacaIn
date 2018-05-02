@@ -1,25 +1,91 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~ Created by YSN Studio on 4/22/18 5:24 PM
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by YSN Studio on 5/2/18 10:54 PM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 4/22/18 4:58 PM
+  ~ Last modified 5/2/18 10:51 PM
   -->
 
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/image_view_background"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pexels_photo_531321" />
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.7"
+        android:background="#000000"
+        android:contentDescription="@string/image_view_background_overlay" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_view_settings_activity_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/image_view_settings"
+                android:paddingEnd="@dimen/horizontal_margin_16dp"
+                android:paddingStart="@dimen/horizontal_margin_16dp"
+                android:src="@drawable/ic_settings_white_24dp" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_activity_main">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:layout_marginEnd="@dimen/horizontal_margin_16dp"
+            android:layout_marginStart="@dimen/horizontal_margin_16dp"
+            android:layout_marginTop="@dimen/vertical_margin_16dp"
+            android:alpha="0.7"
+            android:background="@drawable/background_gradient" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:layout_marginEnd="@dimen/horizontal_margin_16dp"
+            android:layout_marginStart="@dimen/horizontal_margin_16dp"
+            android:layout_marginTop="@dimen/vertical_margin_16dp"
+            android:paddingBottom="@dimen/vertical_margin_16dp"
+            android:paddingEnd="@dimen/horizontal_margin_16dp"
+            android:paddingStart="@dimen/horizontal_margin_16dp"
+            android:paddingTop="@dimen/vertical_margin_16dp">
+
+            <TextView
+                android:id="@+id/text_view_title_quote_of_today_activity_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/quote_of_today"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
