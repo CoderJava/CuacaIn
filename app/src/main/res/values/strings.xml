@@ -1,10 +1,14 @@
 <!--
-  ~ Created by YSN Studio on 4/22/18 5:24 PM
+  ~ Created by YSN Studio on 5/2/18 10:54 PM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 4/22/18 4:58 PM
+  ~ Last modified 5/2/18 10:51 PM
   -->
 
 <resources>
     <string name="app_name">CuacaIn</string>
+    <string name="image_view_settings">image view settings</string>
+    <string name="image_view_background">image view background</string>
+    <string name="image_view_background_overlay">image view background overlay</string>
+    <string name="quote_of_today">Quote of Today</string>
 </resources>

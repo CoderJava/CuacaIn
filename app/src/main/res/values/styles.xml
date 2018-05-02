@@ -1,14 +1,14 @@
 <!--
-  ~ Created by YSN Studio on 4/22/18 5:24 PM
+  ~ Created by YSN Studio on 5/2/18 10:54 PM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 4/22/18 4:58 PM
+  ~ Last modified 4/22/18 6:02 PM
   -->
 
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
