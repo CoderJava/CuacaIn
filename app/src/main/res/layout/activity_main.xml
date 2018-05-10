@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Created by YSN Studio on 5/10/18 10:31 PM
+  ~ Created by YSN Studio on 5/10/18 11:11 PM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 5/10/18 7:10 PM
+  ~ Last modified 5/10/18 10:37 PM
   -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".views.ui.main.MainActivity">
 
     <ImageView
         android:layout_width="match_parent"
