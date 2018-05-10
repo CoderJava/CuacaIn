@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Created by YSN Studio on 5/10/18 6:40 PM
+  ~ Created by YSN Studio on 5/10/18 10:31 PM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 5/10/18 6:37 PM
+  ~ Last modified 5/10/18 7:10 PM
   -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -262,6 +262,7 @@
             android:paddingRight="20dp"
             android:paddingTop="4dp"
             android:text="@string/headline"
+            android:textAllCaps="true"
             android:textColor="@android:color/white" />
 
     </RelativeLayout>
