@@ -1,13 +1,13 @@
 /*
- * Created by YSN Studio on 5/11/18 10:41 PM
+ * Created by YSN Studio on 5/11/18 10:54 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 5/11/18 10:39 PM
+ * Last modified 5/11/18 10:52 PM
  */
 
 package com.ysn.cuacain.di.module
 
-import com.ysn.cuacain.api.QuoteEndpoints
+import com.ysn.cuacain.api.quote.QuoteEndpoints
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
