@@ -1,13 +1,12 @@
 /*
- * Created by YSN Studio on 5/10/18 11:09 PM
+ * Created by YSN Studio on 5/11/18 9:10 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 5/10/18 10:57 PM
+ * Last modified 5/11/18 9:10 PM
  */
 
 package com.ysn.cuacain.di.module
 
-import com.ysn.cuacain.BuildConfig
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -22,7 +21,6 @@ class RetrofitModule {
     @Provides
     @Singleton
     fun provideRetrofitClient(client: OkHttpClient): Retrofit = Retrofit.Builder()
-            .baseUrl(BuildConfig.BASE_URL_WEATHER_ENDPOINT)
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .client(client)
