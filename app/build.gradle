@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 5/2/18 10:53 PM
+ * Created by YSN Studio on 5/11/18 9:09 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 5/2/18 10:21 PM
+ * Last modified 5/11/18 9:08 PM
  */
 
 apply plugin: 'com.android.application'
@@ -32,6 +32,7 @@ android {
             applicationIdSuffix ""
             buildConfigField("String", "BASE_URL_WEATHER_ENDPOINT", "\"http://dataservice.accuweather.com/\"")
             buildConfigField("String", "BASE_URL_CURRENCY_ENDPOINT", "\"http://data.fixer.io/api/\"")
+            buildConfigField("String", "BASE_URL_QUOTE_ENDPOINT", "\"https://quotes.rest/qod\"")
         }
     }
 }
