@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 5/11/18 10:44 PM
+ * Created by YSN Studio on 5/11/18 10:58 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 5/11/18 10:39 PM
+ * Last modified 5/11/18 10:52 PM
  */
 
 package com.ysn.cuacain.di.component
@@ -10,7 +10,7 @@ package com.ysn.cuacain.di.component
 import android.app.Application
 import android.content.SharedPreferences
 import com.google.gson.Gson
-import com.ysn.cuacain.api.QuoteEndpoints
+import com.ysn.cuacain.api.quote.QuoteEndpoints
 import com.ysn.cuacain.di.module.*
 import dagger.Component
 import okhttp3.Cache
@@ -21,7 +21,7 @@ import javax.inject.Named
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [(AppModule::class), (RetrofitModule::class), (QuoteApiModule::class), (OkHttpModule::class), (SharedPreferencesModule::class)])
+@Component(modules = [(AppModule::class), (RetrofitModule::class), (QuoteApiModule::class), (WeatherApiModule::class), (OkHttpModule::class), (SharedPreferencesModule::class)])
 interface AppComponent {
 
     fun application(): Application
@@ -29,7 +29,10 @@ interface AppComponent {
     fun gson(): Gson
 
     @Named("quote")
-    fun retrofit(): Retrofit
+    fun retrofitQuote(): Retrofit
+
+    @Named("weather")
+    fun retrofitWeather(): Retrofit
 
     fun quoteEndpoints(): QuoteEndpoints
 
