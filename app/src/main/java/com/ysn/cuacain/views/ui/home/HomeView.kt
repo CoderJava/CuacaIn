@@ -1,15 +1,15 @@
 /*
- * Created by YSN Studio on 5/11/18 11:00 PM
+ * Created by YSN Studio on 5/12/18 7:41 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 5/11/18 9:25 PM
+ * Last modified 5/12/18 7:38 AM
  */
 
-package com.ysn.cuacain.views.ui.main
+package com.ysn.cuacain.views.ui.home
 
 import com.ysn.cuacain.views.base.mvp.BaseView
 
-interface MainView : BaseView {
+interface HomeView : BaseView {
 
     fun loadQuoteOfToday(quote: String, author: String)
 
