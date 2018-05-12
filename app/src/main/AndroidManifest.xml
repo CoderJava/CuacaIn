@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Created by YSN Studio on 5/11/18 10:59 PM
+  ~ Created by YSN Studio on 5/12/18 7:41 AM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 5/11/18 9:27 PM
+  ~ Last modified 5/12/18 7:38 AM
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -19,7 +19,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".views.ui.main.MainActivity">
+        <activity android:name=".views.ui.home.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
