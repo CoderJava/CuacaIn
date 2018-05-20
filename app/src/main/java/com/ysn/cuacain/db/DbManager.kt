@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 5/20/18 11:46 PM
+ * Created by YSN Studio on 5/20/18 11:53 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 5/20/18 10:51 PM
+ * Last modified 5/20/18 11:53 PM
  */
 
 package com.ysn.cuacain.db
@@ -22,6 +22,7 @@ class DbManager @Inject constructor(val application: Application) {
      * @param entityDaily1DayForecast - Value entity daily 1 day forecast
      */
     fun putEntityDaily1DayForecastBox(entityDaily1DayForecast: EntityDaily1DayForecast) {
+        entityDaily1DayForecastBox.removeAll()
         entityDaily1DayForecastBox.put(entityDaily1DayForecast)
     }
 
