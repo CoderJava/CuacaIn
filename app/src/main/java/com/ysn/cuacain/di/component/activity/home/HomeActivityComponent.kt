@@ -1,16 +1,16 @@
 /*
- * Created by YSN Studio on 5/12/18 7:42 AM
+ * Created by YSN Studio on 5/20/18 10:25 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 5/12/18 7:38 AM
+ * Last modified 5/20/18 12:00 AM
  */
 
-package com.ysn.cuacain.di.component.activity
+package com.ysn.cuacain.di.component.activity.home
 
 import com.ysn.cuacain.di.ActivityScope
 import com.ysn.cuacain.di.component.AppComponent
-import com.ysn.cuacain.di.module.activity.main.HomeActivityModule
-import com.ysn.cuacain.views.ui.home.HomeActivity
+import com.ysn.cuacain.di.module.activity.home.HomeActivityModule
+import com.ysn.cuacain.views.ui.activity.home.HomeActivity
 import dagger.Component
 
 @ActivityScope

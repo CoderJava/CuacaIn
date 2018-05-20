@@ -1,11 +1,11 @@
 /*
- * Created by YSN Studio on 5/12/18 7:41 AM
+ * Created by YSN Studio on 5/20/18 10:25 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 5/12/18 7:38 AM
+ * Last modified 5/20/18 12:00 AM
  */
 
-package com.ysn.cuacain.views.ui.home
+package com.ysn.cuacain.views.ui.activity.home
 
 import com.ysn.cuacain.views.base.mvp.BaseView
 
