@@ -1,14 +1,15 @@
 /*
- * Created by YSN Studio on 5/20/18 1:30 PM
+ * Created by YSN Studio on 5/20/18 11:51 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 5/20/18 1:27 PM
+ * Last modified 5/20/18 10:46 PM
  */
 
 package com.ysn.cuacain.views.ui.activity.splashscreen
 
 import android.Manifest
 import android.annotation.SuppressLint
+import android.location.Location
 import android.os.Build
 import android.os.Bundle
 import android.support.design.widget.BaseTransientBottomBar
@@ -153,12 +154,17 @@ class SplashScreenActivity : BaseActivity(), SplashScreenView, AnkoLogger,
         /* nothing to do in here */
     }
 
-    override fun saveLastLocation() {
-        startActivity(intentFor<HomeActivity>().clearTask().newTask())
+    override fun saveLastLocation(location: Location?) {
+        presenter.onGetLocationWeather(location = location)
     }
 
     override fun saveLastLocationFailed(message: String?) {
-        snackbar(find(android.R.id.content), message ?: getString(R.string.error_occured_to_get_your_location))
+        showMessageErrorSnackBar(message = message)
+    }
+
+    private fun showMessageErrorSnackBar(message: String?) {
+        snackbar(find(android.R.id.content), message
+                ?: getString(R.string.error_occured_to_get_your_location))
                 .addCallback(object : BaseTransientBottomBar.BaseCallback<Snackbar>() {
                     override fun onDismissed(transientBottomBar: Snackbar?, event: Int) {
                         super.onDismissed(transientBottomBar, event)
@@ -166,6 +172,14 @@ class SplashScreenActivity : BaseActivity(), SplashScreenView, AnkoLogger,
                     }
                 })
                 .show()
+    }
+
+    override fun getLocationWeather(locationId: String?) {
+        startActivity(intentFor<HomeActivity>().newTask().clearTask())
+    }
+
+    override fun getLocationWeatherFailed(message: String?) {
+        showMessageErrorSnackBar(message = message)
     }
 
 }
