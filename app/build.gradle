@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 5/20/18 11:23 AM
+ * Created by YSN Studio on 5/20/18 1:58 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 5/20/18 11:22 AM
+ * Last modified 5/20/18 1:43 PM
  */
 
 apply plugin: 'com.android.application'
@@ -33,6 +33,7 @@ android {
             buildConfigField("String", "BASE_URL_WEATHER_ENDPOINT", "\"http://dataservice.accuweather.com/\"")
             buildConfigField("String", "BASE_URL_CURRENCY_ENDPOINT", "\"http://data.fixer.io/api/\"")
             buildConfigField("String", "BASE_URL_QUOTE_ENDPOINT", "\"https://quotes.rest/\"")
+            buildConfigField("String", "API_KEY_ACCU_WEATHER", "\"r296cUNULrv55Jgl0QqUjmGAid3PGq0E\"")
         }
     }
 }
