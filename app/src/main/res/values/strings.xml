@@ -1,8 +1,8 @@
 <!--
-  ~ Created by YSN Studio on 5/20/18 1:28 PM
+  ~ Created by YSN Studio on 5/20/18 11:43 PM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 5/20/18 1:27 PM
+  ~ Last modified 5/20/18 7:25 PM
   -->
 
 <resources>
@@ -26,4 +26,6 @@
     <string name="all_permissions_denied">All those permissions are needed for doing some magic</string>
     <string name="settings">Settings</string>
     <string name="error_occured_to_get_your_location">Error occured to get your location</string>
+    <string name="minus">-</string>
+    <string name="symbol_fahrenheit">F</string>
 </resources>
