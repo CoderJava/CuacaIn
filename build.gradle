@@ -1,14 +1,15 @@
 /*
- * Created by YSN Studio on 5/20/18 11:23 AM
+ * Created by YSN Studio on 5/20/18 11:43 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 5/20/18 10:46 AM
+ * Last modified 5/20/18 5:15 PM
  */
 
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
     ext.kotlin_version = '1.2.41'
+    ext.object_box_version = '1.4.4'
     repositories {
         google()
         jcenter()
@@ -16,6 +17,7 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "io.objectbox:objectbox-gradle-plugin:$object_box_version"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
