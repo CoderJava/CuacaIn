@@ -1,8 +1,8 @@
 <!--
-  ~ Created by YSN Studio on 5/10/18 10:31 PM
+  ~ Created by YSN Studio on 5/20/18 10:22 AM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 5/10/18 7:05 PM
+  ~ Last modified 5/20/18 10:22 AM
   -->
 
 <resources>
@@ -22,4 +22,7 @@
     <string name="example_condition_weather">Quite Wet</string>
     <string name="headline">Headline</string>
     <string name="_00_00">00:00</string>
+    <string name="image_view_banner_dbs">image view banner dbs</string>
+    <string name="all_permissions_denied">All those permissions are needed for doing some magic</string>
+    <string name="settings">Settings</string>
 </resources>
