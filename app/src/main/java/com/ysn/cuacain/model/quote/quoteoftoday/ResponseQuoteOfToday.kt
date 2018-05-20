@@ -1,11 +1,11 @@
 /*
- * Created by YSN Studio on 5/11/18 10:57 PM
+ * Created by YSN Studio on 5/20/18 1:59 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 5/11/18 9:13 PM
+ * Last modified 5/20/18 1:50 PM
  */
 
-package com.ysn.cuacain.model.quote
+package com.ysn.cuacain.model.quote.quoteoftoday
 
 import com.google.gson.annotations.SerializedName
 
