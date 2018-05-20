@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 5/11/18 10:42 PM
+ * Created by YSN Studio on 5/20/18 10:21 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 5/11/18 10:05 PM
+ * Last modified 5/20/18 12:11 AM
  */
 
 apply plugin: 'com.android.application'
@@ -94,4 +94,10 @@ dependencies {
     /* Anko */
     implementation "org.jetbrains.anko:anko-commons:$anko_version"
     implementation "org.jetbrains.anko:anko-design:$anko_version"
+
+    /* Dexter */
+    implementation "com.karumi:dexter:$dexter_version"
+
+    /* Google play services */
+    implementation "com.google.android.gms:play-services-location:$google_play_services_version"
 }
