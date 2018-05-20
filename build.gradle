@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 5/20/18 10:21 AM
+ * Created by YSN Studio on 5/20/18 11:23 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 5/20/18 12:11 AM
+ * Last modified 5/20/18 10:46 AM
  */
 
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
@@ -51,4 +51,5 @@ ext {
     anko_version = "0.10.4"
     dexter_version = "4.2.0"
     google_play_services_version = "15.0.1"
+    android_ktx_version = "1.0.0-alpha1"
 }

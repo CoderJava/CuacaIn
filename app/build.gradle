@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 5/20/18 10:21 AM
+ * Created by YSN Studio on 5/20/18 11:23 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 5/20/18 12:11 AM
+ * Last modified 5/20/18 11:22 AM
  */
 
 apply plugin: 'com.android.application'
@@ -54,8 +54,8 @@ dependencies {
 
     /* Testing framework */
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     /* Type safe HTTP client for Andriod and Java by Square */
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
@@ -94,6 +94,9 @@ dependencies {
     /* Anko */
     implementation "org.jetbrains.anko:anko-commons:$anko_version"
     implementation "org.jetbrains.anko:anko-design:$anko_version"
+
+    /* Android ktx */
+    /*implementation "androidx.core:core-ktx:$android_ktx_version"*/
 
     /* Dexter */
     implementation "com.karumi:dexter:$dexter_version"
