@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 5/20/18 1:29 PM
+ * Created by YSN Studio on 5/20/18 11:46 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 5/20/18 1:29 PM
+ * Last modified 5/20/18 7:45 PM
  */
 
 package com.ysn.cuacain.model.sharedpreferences
@@ -15,6 +15,7 @@ class SharedPreferencesManager @Inject constructor(private val sharedPreferences
     companion object {
         const val LAST_LATITUDE = "last_latitude"
         const val LAST_LONGITUDE = "last_longitude"
+        const val LOCATION_ID: String = "location_id"
     }
 
     fun putDataInt(key: String, value: Int) {
@@ -23,9 +24,7 @@ class SharedPreferencesManager @Inject constructor(private val sharedPreferences
                 .apply()
     }
 
-    fun getDataInt(key: String) {
-        sharedPreferences.getInt(key, 0)
-    }
+    fun getDataInt(key: String) = sharedPreferences.getInt(key, 0)
 
     fun putDataBoolean(key: String, value: Boolean) {
         sharedPreferences.edit()
@@ -33,9 +32,7 @@ class SharedPreferencesManager @Inject constructor(private val sharedPreferences
                 .apply()
     }
 
-    fun getDataBoolean(key: String) {
-        sharedPreferences.getBoolean(key, false)
-    }
+    fun getDataBoolean(key: String) = sharedPreferences.getBoolean(key, false)
 
     fun putDataFloat(key: String, value: Float) {
         sharedPreferences.edit()
@@ -43,9 +40,7 @@ class SharedPreferencesManager @Inject constructor(private val sharedPreferences
                 .apply()
     }
 
-    fun getDataFloat(key: String) {
-        sharedPreferences.getFloat(key, 0F)
-    }
+    fun getDataFloat(key: String) = sharedPreferences.getFloat(key, 0F)
 
     fun putDataLong(key: String, value: Long) {
         sharedPreferences.edit()
@@ -53,9 +48,7 @@ class SharedPreferencesManager @Inject constructor(private val sharedPreferences
                 .apply()
     }
 
-    fun getDataLong(key: String) {
-        sharedPreferences.getLong(key, 0L)
-    }
+    fun getDataLong(key: String) = sharedPreferences.getLong(key, 0L)
 
     fun putDataString(key: String, value: String) {
         sharedPreferences.edit()
@@ -63,8 +56,6 @@ class SharedPreferencesManager @Inject constructor(private val sharedPreferences
                 .apply()
     }
 
-    fun getDataString(key: String) {
-        sharedPreferences.getString(key, "")
-    }
+    fun getDataString(key: String) = sharedPreferences.getString(key, "")
 
 }
