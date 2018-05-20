@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 5/20/18 11:28 AM
+ * Created by YSN Studio on 5/20/18 1:29 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 5/20/18 11:27 AM
+ * Last modified 5/20/18 1:29 PM
  */
 
 package com.ysn.cuacain.model.sharedpreferences
@@ -10,7 +10,12 @@ package com.ysn.cuacain.model.sharedpreferences
 import android.content.SharedPreferences
 import javax.inject.Inject
 
-class SharedPreferenceManager @Inject constructor(private val sharedPreferences: SharedPreferences) {
+class SharedPreferencesManager @Inject constructor(private val sharedPreferences: SharedPreferences) {
+
+    companion object {
+        const val LAST_LATITUDE = "last_latitude"
+        const val LAST_LONGITUDE = "last_longitude"
+    }
 
     fun putDataInt(key: String, value: Int) {
         sharedPreferences.edit()
