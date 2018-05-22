@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by YSN Studio on 5/23/18 4:47 AM
+  ~ Copyright (c) 2018. All rights reserved.
+  ~
+  ~ Last modified 5/23/18 4:37 AM
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear_layout_container_item_12_hour_forecast_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/vertical_margin_16dp"
+    android:paddingLeft="@dimen/horizontal_margin_16dp"
+    android:paddingRight="@dimen/horizontal_margin_16dp"
+    android:paddingTop="@dimen/vertical_margin_16dp">
+
+    <TextView
+        android:id="@+id/text_view_time_item_12_hour_forecast_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/_00_00"
+        android:textColor="@android:color/white" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/image_view_icon_weather_item_12_hour_forecast_layout"
+        android:contentDescription="@string/image_view_icon_weather"
+        android:src="@drawable/img_03_s" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/text_view_weather_temperature_item_12_hour_forecast_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/example_temperature"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/text_view_weather_temperature_item_12_hour_forecast_layout"
+            android:text="@string/o"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
