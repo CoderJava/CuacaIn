@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 5/20/18 11:48 PM
+ * Created by YSN Studio on 5/23/18 4:45 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 5/20/18 11:38 PM
+ * Last modified 5/22/18 4:41 PM
  */
 
 package com.ysn.cuacain.api.weather
@@ -36,6 +36,6 @@ interface WeatherEndpoints {
     @GET("forecasts/v1/hourly/12hour/{locationId}")
     fun getDaily12HourForecast(@Path("locationId") locationId: String = "",
                                @Query("apikey") apiKey: String = BuildConfig.API_KEY_ACCU_WEATHER)
-            : Observable<ResponseDaily12HourForecast>
+            : Observable<List<ResponseDaily12HourForecast>>
 
 }
