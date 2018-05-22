@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 5/20/18 11:45 PM
+ * Created by YSN Studio on 5/23/18 4:46 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 5/20/18 11:38 PM
+ * Last modified 5/23/18 4:43 AM
  */
 
 package com.ysn.cuacain.model.weather.currentcondition
@@ -26,7 +26,7 @@ data class Temperature(
 )
 
 data class Metric(
-        @SerializedName("Value") val value: Int?,
+        @SerializedName("Value") val value: Double?,
         @SerializedName("Unit") val unit: String?,
         @SerializedName("UnitType") val unitType: Int?
 )
