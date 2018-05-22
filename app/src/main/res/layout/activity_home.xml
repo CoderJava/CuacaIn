@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Created by YSN Studio on 5/20/18 11:44 PM
+  ~ Created by YSN Studio on 5/23/18 5:25 AM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 5/20/18 11:00 PM
+  ~ Last modified 5/23/18 5:24 AM
   -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -118,10 +118,32 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/relative_layout_container_provider_data_weather_activity_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="@dimen/vertical_margin_8dp"
+            android:background="@android:color/black"
+            android:alpha="0.7"
+            >
+
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="24dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/image_view_icon_accu_weather"
+                android:alpha="0.5"
+                android:src="@drawable/img_aw_white_small" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
             android:id="@+id/relative_layout_container_loading_forecast_activity_home"
             android:layout_width="match_parent"
             android:layout_height="128dp"
-            android:layout_alignParentBottom="true">
+            android:layout_above="@id/relative_layout_container_provider_data_weather_activity_main"
+            android:alpha="0.7"
+            android:background="@android:color/black">
 
             <ProgressBar
                 style="?android:attr/progressBarStyleHorizontal"
@@ -136,7 +158,9 @@
             android:id="@+id/relative_layout_container_content_forecast_activity_home"
             android:layout_width="match_parent"
             android:layout_height="128dp"
-            android:layout_alignParentBottom="true"
+            android:layout_above="@id/relative_layout_container_provider_data_weather_activity_main"
+            android:alpha="0.7"
+            android:background="@android:color/black"
             android:visibility="invisible">
 
             <android.support.v7.widget.RecyclerView
@@ -152,6 +176,8 @@
             android:layout_width="match_parent"
             android:layout_height="128dp"
             android:layout_above="@+id/relative_layout_container_content_forecast_activity_home"
+            android:alpha="0.6"
+            android:background="@android:color/black"
             android:orientation="vertical"
             android:paddingBottom="@dimen/vertical_margin_24dp"
             android:paddingLeft="@dimen/horizontal_margin_16dp"
@@ -286,9 +312,9 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:id="@+id/text_view_weather_condition_content_headline_activity_home"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/text_view_weather_condition_content_headline_activity_home"
                         android:text="@string/example_condition_weather"
                         android:textColor="@android:color/white"
                         android:textSize="18sp" />
@@ -353,7 +379,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+            android:layout_above="@id/relative_layout_container_provider_data_weather_activity_main"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="115dp"
             android:background="@drawable/background_rounded_darker_gray"
