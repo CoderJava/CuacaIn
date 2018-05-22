@@ -1,18 +1,18 @@
 /*
- * Created by YSN Studio on 5/20/18 11:47 PM
+ * Created by YSN Studio on 5/23/18 4:45 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 5/20/18 11:14 PM
+ * Last modified 5/23/18 4:45 AM
  */
 
 package com.ysn.cuacain.utils
 
+import android.content.Context
 import android.graphics.drawable.Drawable
 import android.support.v4.content.ContextCompat
 import android.view.View
 import android.widget.ImageView
 import com.ysn.cuacain.R
-import com.ysn.cuacain.views.ui.activity.home.HomeActivity
 
 fun View.visible() {
     visibility = View.VISIBLE
@@ -26,7 +26,7 @@ fun View.gone() {
     visibility = View.GONE
 }
 
-fun ImageView.setIconWeather(idIconWeather: Int, context: HomeActivity) {
+fun ImageView.setIconWeather(idIconWeather: Int, context: Context) {
     var imageDrawable : Drawable? = null
     when (idIconWeather) {
         1 -> imageDrawable = ContextCompat.getDrawable(context, R.drawable.img_01_s)
