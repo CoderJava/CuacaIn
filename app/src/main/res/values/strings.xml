@@ -1,8 +1,8 @@
 <!--
-  ~ Created by YSN Studio on 5/20/18 11:43 PM
+  ~ Created by YSN Studio on 5/23/18 5:24 AM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 5/20/18 7:25 PM
+  ~ Last modified 5/23/18 5:23 AM
   -->
 
 <resources>
@@ -28,4 +28,5 @@
     <string name="error_occured_to_get_your_location">Error occured to get your location</string>
     <string name="minus">-</string>
     <string name="symbol_fahrenheit">F</string>
+    <string name="image_view_icon_accu_weather">image view icon accu weather</string>
 </resources>
