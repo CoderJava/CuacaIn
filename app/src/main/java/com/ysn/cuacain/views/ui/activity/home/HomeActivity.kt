@@ -1,13 +1,15 @@
 /*
- * Created by YSN Studio on 5/20/18 11:54 PM
+ * Created by YSN Studio on 5/23/18 4:48 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 5/20/18 11:40 PM
+ * Last modified 5/23/18 4:35 AM
  */
 
 package com.ysn.cuacain.views.ui.activity.home
 
+import android.content.Context
 import android.os.Bundle
+import android.support.v7.widget.LinearLayoutManager
 import com.ysn.cuacain.R
 import com.ysn.cuacain.db.entity.daily1dayforecast.EntityDaily1DayForecast
 import com.ysn.cuacain.di.component.activity.home.DaggerHomeActivityComponent
@@ -17,6 +19,7 @@ import com.ysn.cuacain.utils.invisible
 import com.ysn.cuacain.utils.setIconWeather
 import com.ysn.cuacain.utils.visible
 import com.ysn.cuacain.views.base.BaseActivity
+import com.ysn.cuacain.views.ui.activity.home.adapter.AdapterDaily12HourForecast
 import kotlinx.android.synthetic.main.activity_home.*
 import org.jetbrains.anko.toast
 import javax.inject.Inject
@@ -31,6 +34,7 @@ class HomeActivity : BaseActivity(), HomeView {
         setContentView(R.layout.activity_home)
         doLoadQuoteOfToday()
         doLoadDaily1DayForecast()
+        doLoadDaily12HourForecast();
     }
 
     override fun onError() {
@@ -103,6 +107,34 @@ class HomeActivity : BaseActivity(), HomeView {
 
     override fun loadDaily1DayForecastFailed(message: String?) {
         hideLoadingDaily1DayForecast()
+        toast(message!!)
+    }
+
+    private fun doLoadDaily12HourForecast() {
+        showLoadingDaily12HourForecast()
+        presenter.onLoadDaily12HourForecast()
+    }
+
+    private fun showLoadingDaily12HourForecast() {
+        relative_layout_container_content_forecast_activity_home.invisible()
+        relative_layout_container_loading_forecast_activity_home.visible()
+    }
+
+    private fun hideLoadingDaily12HourForecast() {
+        relative_layout_container_content_forecast_activity_home.visible()
+        relative_layout_container_loading_forecast_activity_home.gone()
+    }
+
+    override fun getViewContext(): Context = this
+
+    override fun loadDaily12HourForecast(adapterDaily12HourForecast: AdapterDaily12HourForecast) {
+        hideLoadingDaily12HourForecast()
+        recycler_view_forecast_activity_home.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        recycler_view_forecast_activity_home.adapter = adapterDaily12HourForecast
+    }
+
+    override fun loadDaily12HourForecastFailed(message: String?) {
+        hideLoadingDaily12HourForecast()
         toast(message!!)
     }
 }

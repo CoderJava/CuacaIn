@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 5/20/18 11:54 PM
+ * Created by YSN Studio on 5/23/18 4:48 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 5/20/18 11:38 PM
+ * Last modified 5/22/18 5:15 PM
  */
 
 package com.ysn.cuacain.views.ui.activity.home
@@ -13,8 +13,10 @@ import com.ysn.cuacain.db.DbManager
 import com.ysn.cuacain.db.entity.daily1dayforecast.EntityDaily1DayForecast
 import com.ysn.cuacain.model.sharedpreferences.SharedPreferencesManager
 import com.ysn.cuacain.model.weather.currentcondition.ResponseCurrentCondition
+import com.ysn.cuacain.model.weather.daily12hourforecast.ResponseDaily12HourForecast
 import com.ysn.cuacain.model.weather.daily1dayforecast.ResponseDaily1DayForecast
 import com.ysn.cuacain.views.base.mvp.BasePresenter
+import com.ysn.cuacain.views.ui.activity.home.adapter.AdapterDaily12HourForecast
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.functions.BiFunction
@@ -75,6 +77,29 @@ class HomePresenter(private val quoteEndpoints: QuoteEndpoints,
                         {
                             it.printStackTrace()
                             view?.loadDaily1DayForecastFailed(message = it.message)
+                        },
+                        {
+                            /* nothing to do in here */
+                        }
+                )
+    }
+
+    fun onLoadDaily12HourForecast() {
+        val context = view?.getViewContext()
+        val listDaily12HourForecast = mutableListOf<ResponseDaily12HourForecast>()
+        val locationId = sharedPreferencesManager.getDataString(SharedPreferencesManager.LOCATION_ID)
+        weatherEndpoints.getDaily12HourForecast(locationId = locationId)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(
+                        {
+                            listDaily12HourForecast.addAll(it)
+                            val adapterDaily12HourForecast = AdapterDaily12HourForecast(listDaily12HourForecast = listDaily12HourForecast, context = context!!)
+                            view?.loadDaily12HourForecast(adapterDaily12HourForecast = adapterDaily12HourForecast)
+                        },
+                        {
+                            it.printStackTrace()
+                            view?.loadDaily12HourForecastFailed(message = it.message)
                         },
                         {
                             /* nothing to do in here */
