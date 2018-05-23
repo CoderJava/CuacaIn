@@ -1,8 +1,8 @@
 <!--
-  ~ Created by YSN Studio on 5/23/18 5:24 AM
+  ~ Created by YSN Studio on 5/23/18 7:51 AM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 5/23/18 5:23 AM
+  ~ Last modified 5/23/18 7:50 AM
   -->
 
 <resources>
@@ -29,4 +29,6 @@
     <string name="minus">-</string>
     <string name="symbol_fahrenheit">F</string>
     <string name="image_view_icon_accu_weather">image view icon accu weather</string>
+    <string name="_1_0_0">1.0.0</string>
+    <string name="developed_by_ysn_studio">Developed by \nYSN Studio</string>
 </resources>
