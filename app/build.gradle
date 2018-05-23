@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 5/20/18 11:43 PM
+ * Created by YSN Studio on 5/23/18 8:04 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 5/20/18 10:15 PM
+ * Last modified 5/23/18 8:03 AM
  */
 
 apply plugin: 'com.android.application'
@@ -18,7 +18,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 27
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         javaCompileOptions {
             annotationProcessorOptions {
