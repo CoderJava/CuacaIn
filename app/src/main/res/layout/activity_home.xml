@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Created by YSN Studio on 5/23/18 5:25 AM
+  ~ Created by YSN Studio on 5/23/18 7:52 AM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 5/23/18 5:24 AM
+  ~ Last modified 5/23/18 5:26 AM
   -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -36,14 +36,14 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/image_view_settings_activity_home"
+                android:id="@+id/image_view_info_activity_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:contentDescription="@string/image_view_settings"
                 android:paddingEnd="@dimen/horizontal_margin_16dp"
                 android:paddingStart="@dimen/horizontal_margin_16dp"
-                android:src="@drawable/ic_settings_white_24dp" />
+                android:src="@drawable/ic_info_outline_white_24dp" />
 
         </RelativeLayout>
 
