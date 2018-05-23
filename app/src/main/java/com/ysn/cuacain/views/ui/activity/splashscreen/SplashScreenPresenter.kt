@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 5/20/18 11:51 PM
+ * Created by YSN Studio on 5/23/18 8:00 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 5/20/18 10:45 PM
+ * Last modified 5/23/18 7:57 AM
  */
 
 package com.ysn.cuacain.views.ui.activity.splashscreen
@@ -16,8 +16,8 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import java.util.concurrent.TimeUnit
 
-class SplashScreenPresenter(private val sharedPreferencesManager: SharedPreferencesManager,
-                            private val weatherEndpoints: WeatherEndpoints) : BasePresenter<SplashScreenView>() {
+class SplashScreenPresenter constructor(private val sharedPreferencesManager: SharedPreferencesManager,
+                                        private val weatherEndpoints: WeatherEndpoints) : BasePresenter<SplashScreenView>() {
 
     fun onSaveLastLocation(location: Location?) {
         Observable
