@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 5/23/18 4:48 AM
+ * Created by YSN Studio on 5/23/18 7:53 AM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 5/23/18 4:35 AM
+ * Last modified 5/23/18 5:29 AM
  */
 
 package com.ysn.cuacain.views.ui.activity.home
@@ -10,6 +10,7 @@ package com.ysn.cuacain.views.ui.activity.home
 import android.content.Context
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.view.View
 import com.ysn.cuacain.R
 import com.ysn.cuacain.db.entity.daily1dayforecast.EntityDaily1DayForecast
 import com.ysn.cuacain.di.component.activity.home.DaggerHomeActivityComponent
@@ -19,12 +20,14 @@ import com.ysn.cuacain.utils.invisible
 import com.ysn.cuacain.utils.setIconWeather
 import com.ysn.cuacain.utils.visible
 import com.ysn.cuacain.views.base.BaseActivity
+import com.ysn.cuacain.views.ui.activity.aboutapp.AboutAppActivity
 import com.ysn.cuacain.views.ui.activity.home.adapter.AdapterDaily12HourForecast
 import kotlinx.android.synthetic.main.activity_home.*
+import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.toast
 import javax.inject.Inject
 
-class HomeActivity : BaseActivity(), HomeView {
+class HomeActivity : BaseActivity(), HomeView, View.OnClickListener {
 
     @Inject
     lateinit var presenter: HomePresenter
@@ -32,9 +35,14 @@ class HomeActivity : BaseActivity(), HomeView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+        initListeners()
         doLoadQuoteOfToday()
         doLoadDaily1DayForecast()
-        doLoadDaily12HourForecast();
+        doLoadDaily12HourForecast()
+    }
+
+    private fun initListeners() {
+        image_view_info_activity_home.setOnClickListener(this)
     }
 
     override fun onError() {
@@ -48,6 +56,19 @@ class HomeActivity : BaseActivity(), HomeView {
                 .build()
                 .inject(this)
         presenter.attachView(this)
+    }
+
+    override fun onClick(view: View?) {
+        view?.let {
+            when (it.id) {
+                R.id.image_view_info_activity_home -> {
+                    startActivity(intentFor<AboutAppActivity>())
+                }
+                else -> {
+                    /* nothing to do in here */
+                }
+            }
+        }
     }
 
     private fun doLoadQuoteOfToday() {
