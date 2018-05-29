@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Created by YSN Studio on 5/29/18 1:22 PM
+  ~ Created by YSN Studio on 5/29/18 1:57 PM
   ~ Copyright (c) 2018. All rights reserved.
   ~
-  ~ Last modified 5/29/18 1:15 PM
+  ~ Last modified 5/29/18 1:56 PM
   -->
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -29,9 +30,10 @@
         android:id="@+id/toolbar_activity_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/transparent">
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <RelativeLayout
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -39,8 +41,10 @@
                 android:id="@+id/text_view_app_name_activity_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 android:fontFamily="@font/raleway_extra_light"
                 android:text="@string/app_name"
                 android:textColor="@android:color/white"
@@ -51,21 +55,23 @@
                 android:id="@+id/image_view_info_activity_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 android:contentDescription="@string/image_view_settings"
                 android:paddingEnd="@dimen/horizontal_margin_16dp"
                 android:paddingStart="@dimen/horizontal_margin_16dp"
                 android:src="@drawable/ic_info_outline_white_24dp" />
 
-        </RelativeLayout>
+        </android.support.constraint.ConstraintLayout>
 
     </android.support.v7.widget.Toolbar>
 
-    <RelativeLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar_activity_home">
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_activity_home">
 
         <RelativeLayout
             android:id="@+id/relative_layout_container_overlay_quote_of_today_activity_home"
@@ -77,7 +83,7 @@
             android:alpha="0.7"
             android:background="@drawable/background_gradient_teal" />
 
-        <RelativeLayout
+        <android.support.constraint.ConstraintLayout
             android:id="@+id/relative_layout_container_quote_of_today_activity_home"
             android:layout_width="match_parent"
             android:layout_height="128dp"
@@ -93,130 +99,141 @@
                 android:id="@+id/text_view_title_quote_of_today_activity_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
                 android:text="@string/quote_of_today"
                 android:textColor="@android:color/white"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/text_view_value_quote_of_today_activity_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/text_view_title_quote_of_today_activity_home"
-                android:layout_centerHorizontal="true"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_title_quote_of_today_activity_home"
                 android:layout_marginTop="4dp"
                 android:fontFamily="sans-serif-condensed"
                 android:text="@string/example_quote_of_today"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/text_view_author_quote_of_today_activity_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
                 android:text="@string/example_author_quote_of_today"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <ProgressBar
                 android:id="@+id/progress_bar_quote_of_today_activity_home"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
                 android:indeterminate="true"
-                android:visibility="invisible" />
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        </RelativeLayout>
+        </android.support.constraint.ConstraintLayout>
 
-        <RelativeLayout
+        <android.support.constraint.ConstraintLayout
             android:id="@+id/relative_layout_container_provider_data_weather_activity_main"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
             android:alpha="0.7"
             android:background="@android:color/black"
-            android:paddingBottom="@dimen/vertical_margin_8dp">
+            android:paddingBottom="@dimen/vertical_margin_8dp"
+            app:layout_constraintBottom_toBottomOf="parent">
 
             <ImageView
                 android:layout_width="128dp"
                 android:layout_height="24dp"
-                android:layout_centerHorizontal="true"
                 android:alpha="0.5"
                 android:contentDescription="@string/image_view_icon_accu_weather"
-                android:src="@drawable/img_aw_white_small" />
+                android:src="@drawable/img_aw_white_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-        </RelativeLayout>
+        </android.support.constraint.ConstraintLayout>
 
-        <RelativeLayout
+        <android.support.constraint.ConstraintLayout
             android:id="@+id/relative_layout_container_loading_forecast_activity_home"
             android:layout_width="match_parent"
             android:layout_height="128dp"
-            android:layout_above="@id/relative_layout_container_provider_data_weather_activity_main"
             android:alpha="0.7"
-            android:background="@android:color/black">
+            android:background="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/relative_layout_container_provider_data_weather_activity_main">
 
             <ProgressBar
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:indeterminate="true" />
+                android:indeterminate="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        </RelativeLayout>
+        </android.support.constraint.ConstraintLayout>
 
-        <RelativeLayout
+        <android.support.constraint.ConstraintLayout
             android:id="@+id/relative_layout_container_content_forecast_activity_home"
             android:layout_width="match_parent"
             android:layout_height="128dp"
-            android:layout_above="@id/relative_layout_container_provider_data_weather_activity_main"
             android:alpha="0.7"
             android:background="@android:color/black"
-            android:visibility="invisible">
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/relative_layout_container_provider_data_weather_activity_main">
 
             <ImageView
                 android:id="@+id/image_view_arrow_left_forecast_activity_main"
                 android:layout_width="wrap_content"
                 android:layout_height="128dp"
-                android:layout_alignParentStart="true"
-                android:paddingStart="@dimen/vertical_margin_8dp"
-                android:paddingEnd="@dimen/vertical_margin_8dp"
                 android:contentDescription="@string/image_view_icon_arrow_left"
-                android:src="@drawable/ic_keyboard_arrow_left_white_24dp" />
+                android:paddingEnd="@dimen/vertical_margin_8dp"
+                android:paddingStart="@dimen/vertical_margin_8dp"
+                android:src="@drawable/ic_keyboard_arrow_left_white_24dp"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <ImageView
                 android:id="@+id/image_view_arrow_right_forecast_activity_main"
                 android:layout_width="wrap_content"
                 android:layout_height="128dp"
-                android:layout_alignParentEnd="true"
-                android:paddingStart="@dimen/vertical_margin_8dp"
-                android:paddingEnd="@dimen/vertical_margin_8dp"
                 android:contentDescription="@string/image_view_icon_arrow_right"
-                android:src="@drawable/ic_keyboard_arrow_right_white_24dp" />
+                android:paddingEnd="@dimen/vertical_margin_8dp"
+                android:paddingStart="@dimen/vertical_margin_8dp"
+                android:src="@drawable/ic_keyboard_arrow_right_white_24dp"
+                app:layout_constraintEnd_toEndOf="parent" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recycler_view_forecast_activity_home"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toEndOf="@+id/image_view_arrow_left_forecast_activity_main"
-                android:layout_toStartOf="@+id/image_view_arrow_right_forecast_activity_main" />
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/image_view_arrow_right_forecast_activity_main"
+                app:layout_constraintStart_toEndOf="@+id/image_view_arrow_left_forecast_activity_main"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        </RelativeLayout>
+        </android.support.constraint.ConstraintLayout>
 
         <LinearLayout
             android:id="@+id/linear_layout_container_headline_activity_home"
             android:layout_width="match_parent"
             android:layout_height="128dp"
-            android:layout_above="@+id/relative_layout_container_content_forecast_activity_home"
             android:alpha="0.6"
             android:background="@android:color/black"
             android:orientation="vertical"
             android:paddingBottom="@dimen/vertical_margin_24dp"
             android:paddingLeft="@dimen/horizontal_margin_16dp"
             android:paddingRight="@dimen/horizontal_margin_16dp"
-            android:paddingTop="@dimen/vertical_margin_24dp">
+            android:paddingTop="@dimen/vertical_margin_24dp"
+            app:layout_constraintBottom_toTopOf="@+id/relative_layout_container_content_forecast_activity_home">
 
             <LinearLayout
                 android:id="@+id/linear_layout_container_content_label_headline_activity_home"
@@ -264,9 +281,9 @@
                 android:id="@+id/linear_layout_container_content_headline_activity_home"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:baselineAligned="false"
                 android:orientation="horizontal"
-                android:visibility="visible">
+                android:visibility="visible"
+                android:baselineAligned="false">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -362,15 +379,13 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="0.1dp"
-            android:layout_above="@+id/relative_layout_container_provider_data_weather_activity_main"
             android:layout_marginBottom="127dp"
-            android:background="@android:color/darker_gray" />
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toTopOf="@+id/relative_layout_container_provider_data_weather_activity_main" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@id/relative_layout_container_provider_data_weather_activity_main"
-            android:layout_centerHorizontal="true"
             android:layout_marginBottom="115dp"
             android:background="@drawable/background_rounded_darker_gray"
             android:fontFamily="sans-serif-smallcaps"
@@ -380,20 +395,21 @@
             android:paddingTop="4dp"
             android:text="@string/forecast"
             android:textAllCaps="true"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@id/relative_layout_container_provider_data_weather_activity_main"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="0.1dp"
-            android:layout_above="@+id/relative_layout_container_content_forecast_activity_home"
             android:layout_marginBottom="127dp"
-            android:background="@android:color/darker_gray" />
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toTopOf="@+id/relative_layout_container_content_forecast_activity_home" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/relative_layout_container_content_forecast_activity_home"
-            android:layout_centerHorizontal="true"
             android:layout_marginBottom="115dp"
             android:background="@drawable/background_rounded_darker_gray"
             android:fontFamily="sans-serif-smallcaps"
@@ -403,9 +419,11 @@
             android:paddingTop="4dp"
             android:text="@string/headline"
             android:textAllCaps="true"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@+id/relative_layout_container_content_forecast_activity_home"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
+    </android.support.constraint.ConstraintLayout>
 
-    </RelativeLayout>
-
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
