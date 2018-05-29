@@ -1,12 +1,13 @@
 /*
- * Created by YSN Studio on 5/23/18 4:47 AM
+ * Created by YSN Studio on 5/29/18 2:15 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 5/23/18 4:41 AM
+ * Last modified 5/29/18 2:12 PM
  */
 
 package com.ysn.cuacain.views.ui.activity.home.adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -25,15 +26,22 @@ class AdapterDaily12HourForecast(private val context: Context,
                                  private val listDaily12HourForecast: MutableList<ResponseDaily12HourForecast>) : RecyclerView.Adapter<AdapterDaily12HourForecast.ViewHolderItemDaily12HourForecast>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderItemDaily12HourForecast {
-        val view = LayoutInflater.from(parent?.context)
+        val view = LayoutInflater.from(parent.context)
                 .inflate(R.layout.item_12_hour_forecast_layout, parent, false)
         return ViewHolderItemDaily12HourForecast(view)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolderItemDaily12HourForecast, position: Int) {
         val responseDaily12HourForecast = listDaily12HourForecast[position]
-        holder.textViewTimeItemDaily12HourForecast.text = SimpleDateFormat("HH:mm", Locale.US)
+        val formatTimeDaily = SimpleDateFormat("HH:mm", Locale.US)
                 .format(stringISOToDate(responseDaily12HourForecast.dateTime))
+        holder.textViewTimeItemDaily12HourForecast.text = formatTimeDaily
+        if (formatTimeDaily == "00:00" && responseDaily12HourForecast.isDaylight!!) {
+            holder.textViewTimeItemDaily12HourForecast.text = "12:00"
+        } else if (formatTimeDaily == "00:00" && !responseDaily12HourForecast.isDaylight!!) {
+            holder.textViewTimeItemDaily12HourForecast.text = "00:00"
+        }
         holder.textViewWeatherTemperatureItemDaily12HourForecast.text = responseDaily12HourForecast.temperature.value.toString()
         holder.imageViewWeatherItemDaily12HourForecast.setIconWeather(idIconWeather = responseDaily12HourForecast.weatherIcon!!, context = context)
     }
