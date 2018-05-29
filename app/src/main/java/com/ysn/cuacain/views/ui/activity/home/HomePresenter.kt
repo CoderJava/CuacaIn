@@ -1,8 +1,8 @@
 /*
- * Created by YSN Studio on 5/23/18 4:48 AM
+ * Created by YSN Studio on 5/29/18 2:14 PM
  * Copyright (c) 2018. All rights reserved.
  *
- * Last modified 5/22/18 5:15 PM
+ * Last modified 5/29/18 2:13 PM
  */
 
 package com.ysn.cuacain.views.ui.activity.home
@@ -94,7 +94,10 @@ class HomePresenter(private val quoteEndpoints: QuoteEndpoints,
                 .subscribe(
                         {
                             listDaily12HourForecast.addAll(it)
-                            val adapterDaily12HourForecast = AdapterDaily12HourForecast(listDaily12HourForecast = listDaily12HourForecast, context = context!!)
+                            val adapterDaily12HourForecast = AdapterDaily12HourForecast(
+                                    listDaily12HourForecast = listDaily12HourForecast,
+                                    context = context!!
+                            )
                             view?.loadDaily12HourForecast(adapterDaily12HourForecast = adapterDaily12HourForecast)
                         },
                         {
